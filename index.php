@@ -1,43 +1,47 @@
 <?php
-const HELLO_WORLD = 1;
-$num = 1; //int
-$bar = 4.1; //float
-$num = HELLO_WORLD; //string
-$num = true; //boolean
-$num = false;
-$num = [1,2,3,4,5]; //array
-$num = [
-    'red' => 1,
-    'blue' => 2,
-    'green' => 3
-];
-$num = [
-    'red' => 1,
-    3.2 => 2,
-    3,
-    200 => 4,
-    5,
-    'foo' => 'bar'
-];
-$num = 1;
-$num = 1 + 1;
-$num = 1 - 1;
-$num = 1 * 1;
-$num = 1 / 1;4 % 2;
-$num += 1;
-$num -= 1;
-$num *= 1;
-$num /= 1;
-$num %= 1;
-$num++;
-$num--;
-$num = 5**2;
-$num = true && false;
-$num = 10 > 2;
-$num = 10 == 10;
-$num = '10' == 10;
-$num = '10' === 10;
-$num = '10' != 10;
-$num = '10' !== 10;
-$num = 'hello' . 'world';
-var_dump($num);
+$num = 10;
+if($num > 10){
+    echo 'suurem';
+} else if($num < 10){
+    echo 'väiksem';
+} else {
+    echo 'võrdne';
+}
+
+switch($num) {
+    case 1:
+        echo "üks";
+        break;
+    case 2:
+        echo 'kaks';
+        breaks;
+    default:
+        echo 'default';
+        break;
+}
+
+for($i = 0; $i < 10; $i++) {
+    echo "kordus $i\n";
+}
+
+while($num < 10){
+    echo "kordus $i\n";
+}
+
+do {
+    echo "do while";
+} while($num < 10);
+
+function hello($name){
+    return "hello $name";
+}
+
+$text = hello('Anu');
+echo $text;
+
+function recursive($i){
+    if($i>0){
+        recursive($i-1);
+    }
+    echo $i;
+}
