@@ -1,29 +1,44 @@
 <?php
 
-trait SomeLogic {
-    public $prop;
-
-    public function method(){
-        echo $this->prop;
+class Job {
+    private $logger;
+    public function __construct(Logger $logger) {
+        $this->logger = $logger;
+    }
+    public function task(){        
+        for ($i=0;$i<10;$i++){
+            $this->logger->log($i);
+        }
     }
 }
 
-trait SomeLogic2 {
-    public $prop;
+interface Logger {
+    public function log($message);
+}
 
-    public function method(){
-        echo $this->prop2;
+class ConsoleLogger implements Logger {
+    public function log($message){
+        echo $message . "\n";
     }
 }
 
-class Something {
-    use SomeLogic;
+
+
+
+
+
+
+
+
+
+
+class NothingLogger implements Logger{
+    public function log($message){
+        
+    }
 }
 
-class SomethingElse {
-    use SomeLogic;
-}
 
-$obj = new Something();
-$obj->method();
-$obj->method2();
+$logger = new ConsoleLogger();
+$job = new Job($logger);
+$job->task();
