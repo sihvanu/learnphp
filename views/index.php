@@ -12,7 +12,7 @@ $name = 'Anu';
     <?php endif ?>
     <ol>
         <?php for($i=0; $i<10; $i++): ?>
-            <li>Item</li>
-        <?php endfor ?>
+            <li>Item <?=$i?></li>
+        <?php endfor; ?>
     </ol>
-<?php require 'partials/footer.php' ?>
+<?php require '/footer.php' ?>

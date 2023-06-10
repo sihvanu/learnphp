@@ -7,4 +7,4 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require 'partials/nav.php' ?>
+    <?php require __DIR__ . '/nav.php' ?>
