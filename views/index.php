@@ -1,18 +1,18 @@
 <?php require 'partials/header.php' ?>
-<?php
-$name = 'Anu';
-?>
-    Home
-    <h1>Hello <?=$name?></h1>
-
-    <?php if(true): ?>
-        <h1>True</h1>
-    <?php  else: ?>
-        <h1>False</h1>
-    <?php endif ?>
-    <ol>
-        <?php for($i=0; $i<10; $i++): ?>
-            <li>Item <?=$i?></li>
-        <?php endfor; ?>
-    </ol>
-<?php require '/footer.php' ?>
+    <div class="container">
+        <?php foreach ($posts as $post) : ?>
+            <div class="card mt-3">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        <?=$post->title?>
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <?=$post->snippet()?>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php require 'partials/footer.php' ?>
