@@ -2,6 +2,7 @@
 if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js|mp4)$/', $_SERVER["REQUEST_URI"])) {
     return false;    // serve the requested resource as-is.
 }
+session_start();
 require __DIR__ . '/../vendor/autoload.php';
 
 require __DIR__ . '/../helpers.php';
