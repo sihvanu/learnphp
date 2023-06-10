@@ -20,6 +20,9 @@
       <a class="navbar-item" href="/about">
         About
       </a>
+      <a class="navbar-item" href="/admin/posts">
+        Admin
+      </a>
     </div>
 
     <div class="navbar-end">

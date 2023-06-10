@@ -12,6 +12,7 @@
                         <?=$post->snippet()?>
                     </div>
                 </div>
+
             </div>
         <?php endforeach; ?>
     </div>

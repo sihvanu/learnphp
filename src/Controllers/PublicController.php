@@ -10,7 +10,7 @@ class PublicController {
         view('index', compact('posts'));
     }
 
-    public function about() {
+    public function about(){
         view('about');
     }
 }
